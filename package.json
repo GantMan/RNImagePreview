@@ -1,0 +1,12 @@
+{
+  "name": "RNImagePreview",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "dos2unix": "find . -type f -exec dos2unix {} \\;",
+  },
+  "dependencies": {
+    "react-native": "^0.19.0"
+  }
+}
