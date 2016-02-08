@@ -21,6 +21,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		388EFA2E1C67DD95006B0216 /* JTSImagePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 388EFA2D1C67DD95006B0216 /* JTSImagePreview.m */; };
+		388EFA3A1C68F587006B0216 /* libJTSImageViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388EFA391C68F587006B0216 /* libJTSImageViewController.a */; };
 		45B6040058C83C5BFF1EA303 /* libPods-RNImagePreview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE2E6ECA5D07371034D87D /* libPods-RNImagePreview.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -125,6 +127,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNImagePreview/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNImagePreview/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		388EFA2C1C67DD95006B0216 /* JTSImagePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImagePreview.h; sourceTree = "<group>"; };
+		388EFA2D1C67DD95006B0216 /* JTSImagePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImagePreview.m; sourceTree = "<group>"; };
+		388EFA391C68F587006B0216 /* libJTSImageViewController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJTSImageViewController.a; path = "Pods/../build/Debug-iphoneos/libJTSImageViewController.a"; sourceTree = "<group>"; };
 		4A90A398F4AC4EA0DEF8869D /* Pods-RNImagePreview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNImagePreview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNImagePreview/Pods-RNImagePreview.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		81EE2E6ECA5D07371034D87D /* libPods-RNImagePreview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNImagePreview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388EFA3A1C68F587006B0216 /* libJTSImageViewController.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -244,6 +250,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				388EFA2C1C67DD95006B0216 /* JTSImagePreview.h */,
+				388EFA2D1C67DD95006B0216 /* JTSImagePreview.m */,
 			);
 			name = RNImagePreview;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 		6E78B7A5A4AD989C7A6C0C9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				388EFA391C68F587006B0216 /* libJTSImageViewController.a */,
 				81EE2E6ECA5D07371034D87D /* libPods-RNImagePreview.a */,
 			);
 			name = Frameworks;
@@ -616,6 +625,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				388EFA2E1C67DD95006B0216 /* JTSImagePreview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,9 +701,15 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = RNImagePreview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNImagePreview;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,9 +724,15 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = RNImagePreview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNImagePreview;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

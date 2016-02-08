@@ -12,6 +12,11 @@ import React, {
 } from 'react-native';
 
 class RNImagePreview extends Component {
+
+  componentDidMount () {
+    React.NativeModules.JTSImagePreview.showImage('http://i.imgur.com/sKh7Z6R.png')
+  }
+
   render() {
     return (
       <View style={styles.container}>
