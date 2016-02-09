@@ -14,7 +14,8 @@ import React, {
 class RNImagePreview extends Component {
 
   componentDidMount () {
-    React.NativeModules.JTSImagePreview.showImage('http://i.imgur.com/sKh7Z6R.png')
+
+    React.NativeModules.JTSImagePreview.showImage('https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=bdc08ca394410d95482816cdb957f078')
   }
 
   render() {
