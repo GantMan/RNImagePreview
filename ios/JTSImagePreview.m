@@ -30,7 +30,7 @@ RCT_EXPORT_METHOD(showImage:(NSString *)url)
 	AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
-		[imageViewer showFromViewController:delegate.rootViewController transition:JTSImageViewControllerTransition_FromOffscreen];
+		[imageViewer showFromViewController:delegate.window.rootViewController transition:JTSImageViewControllerTransition_FromOffscreen];
 	});
 }
 
