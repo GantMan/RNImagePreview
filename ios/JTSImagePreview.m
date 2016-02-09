@@ -30,7 +30,7 @@ RCT_EXPORT_METHOD(showImage:(NSString *)url)
 	AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
   // Determine what controller is in the front based on if the app has a navigation controller or a tab bar controller
-  id showingController;
+  UIViewController* showingController;
   if([delegate.window.rootViewController isKindOfClass:[UINavigationController class]]){
 
     showingController = ((UINavigationController*)delegate.window.rootViewController).visibleViewController;
