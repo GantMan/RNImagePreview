@@ -28,9 +28,22 @@ RCT_EXPORT_METHOD(showImage:(NSString *)url)
 	
 	// Get root to show from
 	AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+  // Determine what controller is in the front based on if the app has a navigation controller or a tab bar controller
+  id showingController;
+  if([delegate.window.rootViewController isKindOfClass:[UINavigationController class]]){
+
+    showingController = ((UINavigationController*)delegate.window.rootViewController).visibleViewController;
+  } else if ([delegate.window.rootViewController isKindOfClass:[UITabBarController class]]) {
+
+    showingController = ((UITabBarController*)delegate.window.rootViewController).selectedViewController;
+  } else {
+    
+    showingController = (UIViewController*)delegate.window.rootViewController;
+  }
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
-		[imageViewer showFromViewController:delegate.rootViewController transition:JTSImageViewControllerTransition_FromOffscreen];
+      [imageViewer showFromViewController:showingController transition:JTSImageViewControllerTransition_FromOffscreen];
 	});
 }
 

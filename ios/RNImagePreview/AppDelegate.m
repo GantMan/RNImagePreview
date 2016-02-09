@@ -50,10 +50,7 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
-	
-	// Keep a reference
-	self.rootViewController = rootViewController;
-	
+		
   [self.window makeKeyAndVisible];
   return YES;
 }
