@@ -3,19 +3,20 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-import React, {
+import React, { Component } from 'react';
+import {
   AppRegistry,
-  Component,
   StyleSheet,
   Text,
-  View
+  View,
+  NativeModules,
 } from 'react-native';
 
 class RNImagePreview extends Component {
 
   componentDidMount () {
 
-    React.NativeModules.JTSImagePreview.showImage('https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=bdc08ca394410d95482816cdb957f078')
+    NativeModules.JTSImagePreview.showImage('https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=bdc08ca394410d95482816cdb957f078')
   }
 
   render() {

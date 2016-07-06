@@ -1,6 +1,8 @@
 # RNImagePreview
 Using a simple cocoapod for image previews in React Native
 
+### react-native upgrade to 0.29.0
+
 ### Details
 * See [here](https://medium.com/infinite-red/beginner-s-guide-to-using-cocoapods-with-react-native-46cb4d372995#.1qx1m22bh) for full blog post
 * See [here](https://medium.com/infinite-red) for all publications from Infinite Red 
