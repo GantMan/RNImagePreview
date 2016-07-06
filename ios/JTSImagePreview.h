@@ -2,8 +2,8 @@
 //  JTSImagePreview.h
 //  RNImagePreview
 //
-//  Created by Gant Laborde on 2/7/16.
-//  Copyright © 2016 Facebook. All rights reserved.
+//  Created by zhuxiankui on 16/7/6.
+//  Copyright © 2016年 Facebook. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
